@@ -1,12 +1,17 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Branch {
-    String localBranch;
-    String listOfSales;
+    ArrayList<Sale> saleList = new ArrayList<>();
 
-    //public static void highestSale;
+    public boolean addSale(Sale sale) { return saleList.add(sale); }
 
-
-    public Branch(String localBranch, String listOfSales) {
-        this.localBranch = localBranch;
-        this.listOfSales = listOfSales;
+    @Override
+    public String toString() {
+        return "Branch{" +
+                ", saleList=" + saleList +
+                '}';
     }
 }
+
+

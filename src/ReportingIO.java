@@ -1,4 +1,5 @@
 // citing : https://ncl.instructure.com/courses/43687/files/5182463?module_item_id=2041579&fd_cookie_set=1
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ReportingIO {
@@ -20,6 +21,8 @@ public class ReportingIO {
                 case 2:
                     System.out.println("You have selected Option 2: Entering Sale Data");
 
+                    Branch branchArray = new Branch();
+
                     Scanner schouseNum = new Scanner(System.in);
                     System.out.println("Input house number: ");
                     int houseNum = schouseNum.nextInt();
@@ -40,8 +43,8 @@ public class ReportingIO {
                     System.out.println("Input year: ");
                     int year = scyear.nextInt();
 
-                    Sale sale1 = new Sale(houseNum, postcode, value, month, year);
-                    System.out.println(sale1);
+                    branchArray.addSale(new Sale(houseNum, postcode, value, month, year));
+                    System.out.println(branchArray);
 
                     System.out.println("Data has been entered.\n");
                     break;
