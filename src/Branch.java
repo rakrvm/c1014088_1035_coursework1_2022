@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Branch {
     ArrayList<Sale> saleList = new ArrayList<>();
