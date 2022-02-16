@@ -11,7 +11,16 @@ public class Sale {
         this.value = value;
         this.month = month;
         this.year = year;
-
-
     }
+
+    public String toString(){
+        return "Sale{" +
+                "House Number = '" + houseNumber + '\'' +
+                ", Postcode ='" + postcode + '\'' +
+                ", Value ='" + value + '\'' +
+                ", Date ='" + month + " " + year + '\'' +
+                '}';
+        }
+
+
 }
