@@ -1,10 +1,12 @@
 // citing : https://ncl.instructure.com/courses/43687/files/5182463?module_item_id=2041579&fd_cookie_set=1
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.ServiceConfigurationError;
 
 public class ReportingIO {
 
     public static void main(String[] args) {
+        Reporting mainReport = new Reporting();
         Scanner s = new Scanner(System.in);
         boolean quit = false;
         while (!quit) {
@@ -15,13 +17,19 @@ public class ReportingIO {
 
                 case 1:
                     System.out.println("You have selected Option 1: Entering Branch Data");
-                    //do something
+
+                    System.out.println("Enter branch names: ");
+
+                    Scanner scbranchName = new Scanner(System.in);
+                    String branchName = scbranchName.nextLine();
+                    mainReport.addBranch(new Branch(branchName));
+                    System.out.println(mainReport);
                     break;
 
                 case 2:
                     System.out.println("You have selected Option 2: Entering Sale Data");
 
-                    Branch branchArray = new Branch();
+                    Branch branchArray = new Branch("Jesmond");
 
                     Scanner schouseNum = new Scanner(System.in);
                     System.out.println("Input house number: ");
@@ -45,6 +53,7 @@ public class ReportingIO {
 
                     branchArray.addSale(new Sale(houseNum, postcode, value, month, year));
                     System.out.println(branchArray);
+                    
 
                     System.out.println("Data has been entered.\n");
                     break;
