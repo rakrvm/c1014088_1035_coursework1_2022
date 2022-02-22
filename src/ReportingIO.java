@@ -1,7 +1,7 @@
-// citing : https://ncl.instructure.com/courses/43687/files/5182463?module_item_id=2041579&fd_cookie_set=1
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.ServiceConfigurationError;
+// reference : https://ncl.instructure.com/courses/43687/files/5182463?module_item_id=2041579&fd_cookie_set=1
+
+import java.util.*;
+
 
 public class ReportingIO {
 
@@ -29,8 +29,6 @@ public class ReportingIO {
                 case 2:
                     System.out.println("You have selected Option 2: Entering Sale Data");
 
-                    Branch branchArray = new Branch("Jesmond");
-
                     Scanner schouseNum = new Scanner(System.in);
                     System.out.println("Input house number: ");
                     int houseNum = schouseNum.nextInt();
@@ -51,9 +49,16 @@ public class ReportingIO {
                     System.out.println("Input year: ");
                     int year = scyear.nextInt();
 
-                    branchArray.addSale(new Sale(houseNum, postcode, value, month, year));
-                    System.out.println(branchArray);
-                    
+                    System.out.println("Select index of branch you want to add data to (1st option = 0 / 2nd option = 1 etc.): ");
+                    System.out.println(mainReport);
+                    Scanner branchSelect = new Scanner(System.in);
+                    int branchChoice = branchSelect.nextInt();
+
+                    System.out.println("Data has been entered.\n");
+
+                    mainReport.branchList.get(branchChoice).addSale(new Sale(houseNum, postcode, value, month, year));
+                    System.out.println(mainReport);
+
 
                     System.out.println("Data has been entered.\n");
                     break;

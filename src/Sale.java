@@ -22,5 +22,11 @@ public class Sale {
                 '}';
         }
 
+    public double getValue() {
+        return value;
+    }
 
+    public int getYear() {
+        return year;
+    }
 }
