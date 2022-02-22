@@ -31,10 +31,10 @@ public class Branch {
            if (Objects.equals(s.getYear(), year)) {
                total += s.getValue();
                numSale++;
-
            }
        }
-       return total/numSale;
+        double avg111 = total/numSale;
+        System.out.println(avg111);
     }
 
     // reference : https://stackoverflow.com/questions/26558397/how-to-find-numbers-in-an-array-that-are-greater-than-less-than-or-equal-to-a

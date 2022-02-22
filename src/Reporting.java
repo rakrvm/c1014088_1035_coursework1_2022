@@ -30,12 +30,14 @@ public class Reporting {
         int o;
         for (i = 0; i < branchList.size(); i++) {
             for (o = 0; o < branchList.get(i).saleList.size(); o++) {
-            if (if (minimum < branchList.get(i).saleList.get(o).getValue()) {
-                System.out.printf("These are the sales greater than the minimum value of sales you asked for: ");
-                System.out.println(branchList.get(i).saleList.get(o).getValue());
+                if (minimum < branchList.get(i).saleList.get(o).getValue()) {
+                    System.out.printf("These are the sales greater than the minimum value of sales you asked for: ");
+                    System.out.println(branchList.get(i).saleList.get(o).getValue());
+                }
             }
         }
     }
+
 
     @Override
     public String toString() {
