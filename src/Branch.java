@@ -37,6 +37,7 @@ public class Branch {
        return total/numSale;
     }
 
+    // reference : https://stackoverflow.com/questions/26558397/how-to-find-numbers-in-an-array-that-are-greater-than-less-than-or-equal-to-a
     public void branchgreaterVal() {
         System.out.println("Enter minimum value for sales: ");
         Scanner gv = new Scanner(System.in);
