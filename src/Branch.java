@@ -1,11 +1,20 @@
 import java.util.*;
 
+/**
+ * This is a special class for representing branch object. It has
+ * methods relating to branch name and array of sales.
+ */
+
 public class Branch {
     String branchName;
 
     ArrayList<Sale> saleList = new ArrayList<>();
     public void addSale(Sale sale) {saleList.add(sale); }
 
+    /**
+     * Constructors that wires up all the parameter values with the field variables.
+     * @param branchName represents the name of the branch
+     */
 
     public Branch(String branchName) {
         this.branchName = branchName;
@@ -50,6 +59,11 @@ public class Branch {
             }
         }
     }
+
+    /**
+     * This returns a human-readable version of the Branch object
+     * @return String representation of Branch
+     */
 
     @Override
     public String toString() {

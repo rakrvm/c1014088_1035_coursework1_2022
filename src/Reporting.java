@@ -38,6 +38,10 @@ public class Reporting {
         }
     }
 
+    /**
+     * This returns a human-readable version of the Reporting object
+     * @return String representation of Reporting
+     */
 
     @Override
     public String toString() {
