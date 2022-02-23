@@ -2,7 +2,10 @@ import java.util.*;
 
 public class Reporting {
     public ArrayList<Branch> branchList = new ArrayList<>();
-    public void addBranch(Branch branch) {branchList.add(branch); }
+
+    public void addBranch(Branch branch) {
+        branchList.add(branch);
+    }
 
 
     // reference: https://www.delftstack.com/howto/java/java-find-max-in-array/
@@ -38,13 +41,41 @@ public class Reporting {
         }
     }
 
-    /**
-     * This returns a human-readable version of the Reporting object
-     * @return String representation of Reporting
-     */
+    public void reportAvgSaleYear(int year) {
 
-    @Override
-    public String toString() {
-        return "branchList=" + branchList;
+        String tempbranchName = "";
+        double total = 0;
+        double reportAvg = 0;
+        int numSale = 0;
+        int i;
+
+        for (i = 0; i < branchList.size(); i++) {
+
+            for (Sale s : branchList.get(i).saleList) {
+                if (Objects.equals(s.getYear(), year)) {
+                    total += s.getValue();
+                    numSale++;
+                }
+            }
+            double tempreportAvg = total / numSale;
+            total = 0;
+
+            if (tempreportAvg > reportAvg) ;{
+                reportAvg = tempreportAvg;
+                tempbranchName = branchList.get(i).getBranchName();
+            }
+        }
+        System.out.println("The branch with the highest average: " + tempbranchName);
     }
-}
+
+
+        /**
+         * This returns a human-readable version of the Reporting object
+         * @return String representation of Reporting
+         */
+
+        @Override
+        public String toString() {
+            return "branchList=" + branchList;
+        }
+    }

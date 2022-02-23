@@ -68,22 +68,17 @@ public class ReportingIO {
                     Scanner s1 = new Scanner(System.in);
                     boolean quit1 = false;
                     while (!quit1) {
-                        System.out.println("Option 1: Search for branch  with  largest  average  value sale  for a given year \nOption 2: Search for highest sale ever reported \nOption 3: Search for all sales with value greater than a given amount \nOption 4: Return to menu");
+                        System.out.println("Option 1: Search for branch with largest average value sale for a given year \nOption 2: Search for highest sale ever reported \nOption 3: Search for all sales with value greater than a given amount \nOption 4: Return to menu");
                         int choice1 = s1.nextInt();
                         switch (choice1) {
                             case 1:
-                                System.out.println("You have selected Option 1: Search for branch  with  largest  average  value sale  for a given year");
+                                System.out.println("You have selected Option 1: Search for branch with largest average value sale for a given year");
 
+                                System.out.println("Select the year you would like to find the average for: ");
                                 Scanner yc = new Scanner(System.in);
                                 int yearChoice = yc.nextInt();
 
-                                System.out.println("Select index of branch you want to add data to (1st option = 0 / 2nd option = 1 etc.): ");
-                                System.out.println(mainReport);
-                                Scanner branchSelect1 = new Scanner(System.in);
-                                int branchChoice1 = branchSelect1.nextInt();
-
-                                mainReport.branchList.get(branchChoice1).branchavgSaleYear(yearChoice);
-
+                                mainReport.reportAvgSaleYear(yearChoice);
                                 break;
 
                             case 2:
@@ -93,7 +88,7 @@ public class ReportingIO {
 
                             case 3:
                                 System.out.println("You have selected Option 3: Search for all sales with value greater than a given amount");
-                                //do something
+                                mainReport.reportgreaterVal();
                                 break;
 
                             case 4:

@@ -60,10 +60,16 @@ public class Branch {
         }
     }
 
+    public String getBranchName() {
+        return branchName;
+    }
+
     /**
      * This returns a human-readable version of the Branch object
      * @return String representation of Branch
      */
+
+
 
     @Override
     public String toString() {
