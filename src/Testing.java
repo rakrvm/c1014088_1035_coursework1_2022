@@ -32,46 +32,33 @@ public class Testing {
          * Tests the method to return the highest value of each branch
          */
 
-        //testingReport.branchList.get(0).branchHighestValue();
-        //testingReport.branchList.get(1).branchHighestValue();
-        //testingReport.branchList.get(2).branchHighestValue();
+        testingReport.branchList.get(0).branchHighestValue();
+        testingReport.branchList.get(1).branchHighestValue();
+        testingReport.branchList.get(2).branchHighestValue();
 
         /**
          * Tests the method to return values higher than inputted value for each branch
          */
 
-        //testingReport.branchList.get(0).branchgreaterVal();
-        //testingReport.branchList.get(1).branchgreaterVal();
-        //testingReport.branchList.get(2).branchgreaterVal();
+        testingReport.branchList.get(0).branchgreaterVal();
+        testingReport.branchList.get(1).branchgreaterVal();
+        testingReport.branchList.get(2).branchgreaterVal();
 
         /**
          * Tests the method to return the average value of the sales in a given year (hardcoded)
          */
 
-        //testingReport.branchList.get(0).branchavgSaleYear(2003);
-        //testingReport.branchList.get(1).branchavgSaleYear(2004);
+        testingReport.branchList.get(0).branchavgSaleYear(2003);
+        testingReport.branchList.get(1).branchavgSaleYear(2004);
 
         /**
          * Tests the method to return the highest value of all branches
          * and the method to return values higher than inputted value for all branches
          */
 
-        //testingReport.reportHighestValue();
-        //testingReport.reportgreaterVal();
+        testingReport.reportHighestValue();
+        testingReport.reportgreaterVal();
 
     }
 }
 
-
-
-    // Scanner yc = new Scanner(System.in);
-   // int yearChoice = yc.nextInt();
-
-                               // System.out.println("Select index of branch you want to add data to (1st option = 0 / 2nd option = 1 etc.): ");
-                                     //   System.out.println(mainReport);
-                                       // Scanner branchSelect1 = new Scanner(System.in);
-                                    //    int branchChoice1 = branchSelect1.nextInt();
-
-        //                                mainReport.branchList.get(branchChoice1).branchavgSaleYear(yearChoice);
-//
-     //
